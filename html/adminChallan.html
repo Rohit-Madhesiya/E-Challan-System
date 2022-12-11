@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/adminChallan.css">
+    <link rel="stylesheet" href="../css/nextHomePopup.css">
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-nav">
+            <img src="../icon/logo.png" alt="logo">
+        </div>
+        <div class="headName-nav">
+            <h3>ई-चालान प्रणाली</h3>
+            <h3>E-CHALLAN SYSTEM</h3>
+        </div>
+        <div class="iconImg-nav">
+            <img src="../icon/NHAI-Black.png" alt="logo img">
+        </div>
+        <nav>
+            <div class="contain-nav">
+                <div class="home-nav" onclick='homeJump()'>
+                    <img src="../mini-icon/680-6800118_home-icon-png-transparent.png" alt="home">
+                    <h4>HOME</h4>
+                </div>
+                <div class="account-nav">
+                    <img src="../mini-icon/admin-icon2.png" alt="account">
+                    <h4>ACCOUNT</h4>
+                    <div class="ac-container-nav">
+                        <div class="login-nav" onclick="homeJump()">
+                            <img src="../mini-icon/iconmonstr-log-out-4-240.png" alt="login">
+                            <h4>OFFICER SIGN IN</h4>
+                        </div>
+                        <div class="create-nav" onclick="reg_officerJump()">
+                            <img src="../mini-icon/iconmonstr-id-card-22-240.png" alt="cr ac img">
+                            <h4>APPLY FOR OFFICER ACCOUNT</h4>
+                        </div>
+                        <div class="create-nav" onclick=" adminChallanJump()">
+                            <img src="../mini-icon/iconmonstr-id-card-22-240.png" alt="admin icon img">
+                            <h4>ADMIN LOGIN</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="rules-nav" onclick="rulesJump()">
+                    <img src="../mini-icon/Mediamodifier-Design-Template (2).png" alt="rules img">
+                    <h4>TRAFFIC RULES</h4>
+                </div>
+                <div class="about-nav" onclick="">
+                    <img src="../mini-icon/question_mark.svg" alt="help img">
+                    <h4>HELP</h4>
+                </div>
+                <div class="about-nav" onclick="">
+                    <img src="../mini-icon/about-256.png" alt="about img">
+                    <h4>ABOUT US</h4>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-container">
+        <div class="nav-list">
+            <div class="admin-user">
+                <h4>ADMIN</h4>
+            </div>
+            <div id="list-opt1">
+                <button id="btn-1" class="list-btn list_btn_focus">Officer List</button>
+            </div>
+            <div id="list-opt2">
+                <button id="btn-2" class="list-btn">Verification Request</button>
+            </div>
+            <div id="list-opt6">
+                <button id="btn-6" class="list-btn">Search For Challan</button>
+            </div>
+            <div id="list-opt3">
+                <button id="btn-3" class="list-btn">Message Box</button>
+            </div>
+            <div id="list-opt5">
+                <button id="btn-5" class="list-btn">Generate Permit No.</button>
+            </div>
+            <div class="logout-div">
+                <button id="logout-btn" class="list-btn logout-btn" onclick="homeJump()">LOGOUT</button>
+            </div>
+        </div>
+        <div class="pages-div">
+            <div class="page page-default">
+                <div class="ad-p0-headName">
+                    <h3>List Of Officers</h3>
+                </div>
+                <hr>
+                <table class="off-list-table">
+                    <thead class="off-list-thead">
+                        <tr id="list-thead-row">
+                            <th>OFFICER ID</th>
+                            <th>FULL NAME</th>
+                            <th>USERNAME</th>
+                            <th>E-MAIL</th>
+                            <th>LAST SEEN</th>
+                            <th>STATUS</th>
+                            <th colspan="3">PRECEEDINGS</th>
+                        </tr>
+                    </thead>
+                    <tbody class="off-list-tbody" id="off_list_body">
+                        <!-- <tr class='list-tbody-row'>
+                            <td>64C3EOA2GI</td>
+                            <td>ROHIT GUPTA</td>
+                            <td>rohit_gupta</td>
+                            <td>rohitmadhesiya19@gmail.com</td>
+                            <td>2022-01-20 21:03:20</td>
+                            <td id="off_list_stat">ACTIVE</td>
+                            <td>
+                                <div class='off_action_div'>
+                                    <button id='off_action_btn'>ACTION</button>
+                                    <div class='off_action_dropdown'>
+                                        <button id='off_action_block'>BLOCK</button>
+                                        <button id='off_action_active'>ACTIVATE</button>
+                                        <button id='off_action_delete'>DELETE</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><button id='off_activity_btn'>ACIVITY</button></td>
+                            <td><button id='off_mssg_btn'>MESSAGE</button></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="page ad-p1">
+                <div class="ad-p0-headName">
+                    <h3>Officer's Pending Request</h3>
+                </div>
+                <hr>
+                <table class="off-list-table">
+                    <thead class="off-list-thead">
+                        <tr id="list-thead-row">
+                            <th>PROFILE</th>
+                            <th>OFFICER ID</th>
+                            <th>FULL NAME</th>
+                            <th>USERNAME</th>
+                            <th>GENDER</th>
+                            <th>MOBILE/E-MAIL</th>
+                            <th colspan="2">ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody class='off-list-tbody' id="verify_tbody">
+                        <!-- <tr class='list-tbody-row'>
+                            <td>
+                                <div class='off_list_img'>
+                                    <img src='../Database_Uploaded/Officers_data/IMG_8065.jpg' alt='' id='off_list_img1'>
+                                    <img src='../Database_Uploaded/Officers_data/abhijeet_sign.jpg' alt='' id='off_list_img2'>
+                                </div>
+                            </td>
+                            <td>64C3EOA2GI</td>
+                            <td>ROHIT GUPTA</td>
+                            <td>rohit_gupta</td>
+                            <td>MALE</td>
+                            <td>9695681057/rohitmadhesiya19@gmail.com</td>
+                            <td><button id='request_approve_btn'>APPROVE</button></td>
+                            <td><button id='request_decline_btn'>DECLINE</button></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="page ad-p2">
+                <div class="msg-headName">
+                    <h3 id="msg_inbox" class="msg_btn1">Inbox</h3>
+                    <h3 id="msg_complaint" class="msg_btn2">Complaint Box</h3>
+                </div>
+                <hr>
+                <div class="msg_subpage1">
+                    <table class="off-list-table">
+                        <thead class="off-list-thead">
+                            <tr id="list-thead-row">
+                                <th>ID NUMBER</th>
+                                <th>FULL NAME</th>
+                                <th>MESSAGE</th>
+                                <th>TIME</th>
+                            </tr>
+                        </thead>
+                        <tbody class="off-list-tbody" id="msg_tbody">
+                            <!-- <tr class='list-tbody-row mssg-tbody-row' id='msg_tbody_row'>
+                                <td>64C3EOA2GI</td>
+                                <td>ROhit Gupta</td>
+                                <td id='msg_row'>Hello Admin, How are you? Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptas quas distinctio fugiat dolorem quaerat officiis? Alias accusamus quis pariatur voluptatibus quam. Ut nam commodi aut
+                                    odio
+                                </td>
+                                <td>12-07-2020 :- 12:32</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="msg_subpage2">
+                    <table class="off-list-table">
+                        <thead class="off-list-thead">
+                            <tr id="list-thead-row">
+                                <th>CHALLAN NUMBER</th>
+                                <th>SUBJECT</th>
+                                <th>MESSAGE</th>
+                                <th>TIME</th>
+                            </tr>
+                        </thead>
+                        <tbody class="off-list-tbody" id="cmplt_body">
+                            <!-- <tr class='list-tbody-row mssg-tbody-row' id='complaint_tbody_row'>
+                                <td class='cmplt_id'>1LED9S</td>
+                                <td id='msg_row' class='cmplt_sub'>complaint for Lorem ipsum dolor sit</td>
+                                <td id='msg_row' class='cmplt_msg'>Hello Admin, How are you? Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptas quas distinctio fugiat dolorem quaerat officiis? Alias accusamus quis pariatur voluptatibus quam. Ut nam commodi aut
+                                    odio
+                                </td>
+                                <td class='cmplt_date'>12-07-2020 :- 12:32</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="page ad-p4 genPermit">
+                <div class="permitGenDiv">
+                    <form method="post" id="permitGenForm">
+                        <input type="text" name="permitInpt" id="permitInpt" placeholder="Permit Number" readonly>
+                        <input type="text" name="officerInput" id="officerInpt" placeholder="Officer ID Number">
+                        <button type="submit" id="validateBtn">Validate</button>
+                    </form>
+                </div>
+                <div class="permitAvailableDiv">
+                    <div class="permitHead">Available Number</div>
+                    <table class="avpermitTab">
+                        <thead>
+                            <tr>
+                                <th>SR. NO.</th>
+                                <th>PERMIT NO.</th>
+                                <th>OFFICER ID NO.</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody class="avPermitTbody">
+                            <tr>
+                                <td colspan="4">EMPTY</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="page ad-p5 searchPage">
+                <div class="searchboxDiv">
+                    <form id="searchForm" method="post">
+                        <input type="search" name="challanNumber" required placeholder="Search for Challan Details" id="searchChallan">
+                        <input type="hidden" name="mode" value="challan">
+                        <button id="searchBtnChallan" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="searchResultDiv">
+                    <div class="secDiv">
+
+                        <div class="fine-head">
+                            <span id="recptNo">Receipt No.:</span>
+                            <span id="genDate">Generated Date:</span>
+                        </div>
+                        <div class="fine-nav">
+                            <img src="../icon/logo.png" alt="logo">
+                            <h4 class="hname">ई-चालान प्रणाली</h4>
+                            <h4>E-CHALLAN SYSTEM</h4>
+                        </div>
+                        <div class="fine-ch">
+                            <h5 id="chNum">Challan No.: &nbsp;</h5>
+                            <h5 id="issDate">Issue Date and Time: &nbsp;</h5>
+                            <h5 id="place">Place: &nbsp;</h5>
+                        </div>
+                        <hr>
+                        <div class="fine-detail">
+                            <div class="detail1">
+                                <div class="subDetail1">
+                                    <h4 id="vehNumber">Registration No.:</h4>
+                                    <h4 id="chasNum">Chassis No.:</h4>
+                                    <h4 id="fName">Owner Name:</h4>
+                                    <h4 id="licenNum">Owner License No.:</h4>
+                                    <h4 id="add">Address:</h4>
+                                </div>
+                                <div class="detail2"></div>
+                            </div>
+
+                            <div class="subDetail2">
+
+                                <h4>Traffic Rules Violation's Description</h4>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Section</th>
+                                            <th>Offence</th>
+                                            <th>Penalty</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tBody"></tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="fine-final">
+                            <img src="../traffic-image/traffic3.png" alt="icon-img">
+                            <h3 id="totalAmt">Amount(Rs.) </h3>
+                            <div class="status">
+                                <h3 id="status">STATUS</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup1">
+        <div class="popupOverlay" onclick="togglePopup1()"></div>
+        <div class="content">
+            <div class="closebtn" onclick="togglePopup1()">&times;</div>
+            <div class="popDiv">
+                <div class="adminPopFront">
+                    <form action="#" name="AdminMsgForm" id="AdminMsgForm" method="post">
+                        <label for="fromIdAdmin" class="fromId" id="fromId">FROM: &nbsp; ADMIN</label> <br>
+                        <label for="toIdAdmin" class="toId" id="toId">TO: &nbsp;</label><br>
+                        <label for="msgLblAdmin">MESSAGE: &nbsp;</label>
+                        <input type="text" name="msgAdminInput" id="msgAdminInput" placeholder="Type Your Message Here"><br>
+                        <input type="submit" id="sendMsgToOfficer" value="SEND">
+                    </form>
+                    <div id="errDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup2">
+        <div class="popupOverlay" onclick="togglePopup2()"></div>
+        <div class="content">
+            <div class="closebtn" onclick="togglePopup2()">&times;</div>
+            <div class="popDiv">
+                <div class="offActivityDiv">
+                    <table class="offActivityTable">
+                        <thead class="activityThead">
+                            <tr>
+                                <th>SERIAL NO.</th>
+                                <th>STATUS</th>
+                                <th>DATE/TIME</th>
+                            </tr>
+                        </thead>
+                        <tbody id="activityTbody">
+                            <tr>
+                                <td colspan="3" style="text-align: center;">EMPTY</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="msg_popup" id="msg_popup">
+        <div class="msg_overlay"></div>
+        <div class="msg_content">
+            <div class="msg_sender_div">
+                <h3 class="msg_name_id_store">FROM: &nbsp; UNKOWN</h3>
+            </div>
+            <div class="msg_date_div">
+                <h3 class="msg_date_store">DATE AND TIME: &nbsp; UNKNOWN</h3>
+            </div>
+            <hr>
+            <div class="msg_sub_store"></div>
+            <div class="msg_body_div">
+                <span class="msg_msg_store">EMPTY</span>
+            </div>
+        </div>
+    </div>
+    <div class="err"></div>
+</body>
+<script type="text/javascript" src="../js/jQuery.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/adminChallan.js"></script>
+
+</html>

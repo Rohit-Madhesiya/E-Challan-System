@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/challanPayment.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/nextHomePopup.css">
+    <title>Challan Payment</title>
+</head>
+
+<body>
+    <div class="loader">
+        <img src="../icon/animation/AqA0.gif" alt="Loading....">
+    </div>
+    <header>
+        <div class="logo-nav">
+            <img src="../icon/logo.png" alt="logo">
+        </div>
+        <div class="headName-nav">
+            <h3>ई-चालान प्रणाली</h3>
+            <h3>E-CHALLAN SYSTEM</h3>
+        </div>
+        <div class="iconImg-nav">
+            <img src="../icon/NHAI-Black.png" alt="logo img">
+        </div>
+        <nav>
+            <div class="contain-nav">
+                <div class="home-nav" onclick='homeJump()'>
+                    <img src="../mini-icon/680-6800118_home-icon-png-transparent.png" alt="home">
+                    <h4>HOME</h4>
+                </div>
+                <div class="account-nav">
+                    <img src="../mini-icon/admin-icon2.png" alt="account">
+                    <h4>ACCOUNT</h4>
+                    <div class="ac-container-nav">
+                        <div class="login-nav" onclick="homeJump()">
+                            <img src="../mini-icon/iconmonstr-log-out-4-240.png" alt="login">
+                            <h4>OFFICER SIGN IN</h4>
+                        </div>
+                        <div class="create-nav" onclick="reg_officerJump()">
+                            <img src="../mini-icon/iconmonstr-id-card-22-240.png" alt="cr ac img">
+                            <h4>APPLY FOR OFFICER ACCOUNT</h4>
+                        </div>
+                        <div class="create-nav" onclick="homeJump()">
+                            <img src="../mini-icon/iconmonstr-id-card-22-240.png" alt="admin icon img">
+                            <h4>ADMIN LOGIN</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="rules-nav" onclick="rulesJump()">
+                    <img src="../mini-icon/Mediamodifier-Design-Template (2).png" alt="rules img">
+                    <h4>TRAFFIC RULES</h4>
+                </div>
+                <div class="about-nav" onclick="">
+                    <img src="../mini-icon/question_mark.svg" alt="help img">
+                    <h4>HELP</h4>
+                </div>
+                <div class="about-nav" onclick="">
+                    <img src="../mini-icon/about-256.png" alt="about img">
+                    <h4>ABOUT US</h4>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h2 class="purposeName">Pay Your Challan Here</h2>
+
+    <div class="details">
+        <input type="checkbox" name="flip" id="numFlip">
+        <div class="firstDiv">
+            <div class="chNum">
+                <form class="firstForm" id="firstForm" action="" method="post">
+                    <div class="numberCheck">
+                        <input type="radio" name='mode' id="chalNum" value="challan" onclick="SelectedText(1)">
+                        <label class="lbl" for="chalNum">Challan Number </label>
+                        <input type="radio" name='mode' id="vehNum" value="rc" onclick="SelectedText(2)">
+                        <label class="lbl" for="vehNum">Vehicle RC Number </label>
+                        <input type="radio" name='mode' id="licNum" value="license" onclick="SelectedText(3)">
+                        <label class="lbl" for="licNum">Driving License Number </label>
+                    </div>
+                    <div class="numSec">
+                        <input type="text" name="challanNumber" class="inptCheck" placeholder="ENTER CHALLAN NUMBER" required>
+                        <input type="submit" class="btnSubmit" value="Proceed">
+                    </div>
+                </form>
+                <label for="numFlip" id="flipLbl">Continue to Payment</label>
+            </div>
+            <div class="secForm">
+                <div class="backDiv">
+                    <label for="numFlip">Back</label>
+                </div>
+                <h2>Confirm Your Payment</h2>
+                <form action="" method="post" id="paymentForm">
+                    <div class="name">
+                        <input type="text" name="name" class="inpt" id="name" maxlength="50" placeholder=" " required>
+                        <label class="lbl" for="name">Account Holder's Name </label>
+                    </div>
+                    <div class="fine">
+                        <input type="number" name="fineAmt" class="inpt" id="amountPay" placeholder=" " onfocus="this.blur()" readonly required>
+                        <label class="lbl" for="fine">Amount(Rs.) </label>
+                    </div>
+                    <div class="bnkNum">
+                        <input type="number" name="accNum" class="inpt" id="bnkNo" maxlength="16" placeholder=" " required>
+                        <label class="lbl" for="bnkNumber">Bank Account's Number </label>
+                    </div>
+                    <div class="pass">
+                        <input type="password" name="password" class="inpt" id="pas" placeholder=" " required>
+                        <label class="lbl" for="password">Bank Passcode </label>
+                    </div>
+                    <div class="challan_number">
+                        <input type="hidden" name="chNumber" id="challan_number">
+                    </div>
+                    <div class="sbt">
+                        <input type="submit" value="PAY NOW" id="submitBtn">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="midDiv">
+            <div class="secDiv" id="secDivReceipt">
+
+                <div class="fine-head">
+                    <span id="recptNo">Receipt No.:</span>
+                    <span id="genDate">Generated Date:</span>
+                </div>
+                <div class="fine-nav">
+                    <img src="" alt="logo">
+                    <h4 class="hname">ई-चालान प्रणाली</h4>
+                    <h4>E-CHALLAN SYSTEM</h4>
+                </div>
+                <div class="fine-ch">
+                    <h5 id="chNum">Challan No.: &nbsp;</h5>
+                    <h5 id="issDate">Issue Date and Time: &nbsp;</h5>
+                    <h5 id="place">Place: &nbsp;</h5>
+                </div>
+                <hr>
+                <div class="fine-detail">
+                    <div class="detail1">
+                        <div class="subDetail1">
+                            <h4 id="vehNumber">Registration No.:</h4>
+                            <h4 id="chasNum">Chassis No.:</h4>
+                            <h4 id="fName">Owner Name:</h4>
+                            <h4 id="licenNum">Owner License No.:</h4>
+                            <h4 id="add">Address:</h4>
+                        </div>
+                        <div class="detail2"></div>
+                    </div>
+
+                    <div class="subDetail2">
+
+                        <h4>Traffic Rules Violation's Description</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Section</th>
+                                    <th>Offence</th>
+                                    <th>Penalty</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tBody"></tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="fine-final">
+                    <img src='' alt="icon-img">
+                    <h3 id="totalAmt">Amount(Rs.) </h3>
+                    <div class="status">
+                        <h3 id="status">STATUS</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="subfooter2" style="display: flex; justify-content:space-evenly;">
+                <div class="pdfDiv">
+                    <button class="pdfBtn" id="pdfBtn">
+                        <img src="../icon/challanPayment/pdf.png" alt="pdf">
+                        Download</button>
+                </div>
+                <div class="complaintDiv pdfDiv">
+                    <button class="complntBtn pdfBtn" id="cmplntBtn" onclick="togglePopup1()">
+                        <h4>Having A Problem? Complain Here</h4>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup1">
+        <div class="popupOverlay" onclick="togglePopup1()"></div>
+        <div class="content">
+            <div class="closebtn" onclick="togglePopup1()">&times;</div>
+            <div class="popDiv">
+                <div class="complaintContainer">
+                    <h3 class="cmpltHead">Kindly, Write Your Complaint</h3>
+                    <div class="subCmplntDiv">
+                        <h3 class="cmpltSubject">Subject</h3>
+                        <input type="text" name="cmpltSub" id="cmpltSub" required>
+                    </div>
+                    <div class="msgCmplntDiv">
+                        <h3 class="cmpltMessage">Description</h3>
+                        <textarea name="cmpltMsg" id="cmpltMsg" cols="30" rows="10" required></textarea>
+                    </div>
+                    <button type="submit" name="cmpltBtn" class="cmpltBtn" id="cmpltBtn">SEND</button>
+                    <div class="errDiv">
+                        <h4 id="errContent"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="work-container">
+
+        <div class="paySuccess"></div>
+        <div class="err"></div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jQuery.js"></script>
+<script src="../jasonday-printThis-v1.15.0-24-g23be1f8/jasonday-printThis-23be1f8/printThis.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/challanPayment.js"></script>
+
+</html>

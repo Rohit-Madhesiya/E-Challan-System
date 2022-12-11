@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/admin_login_popup.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>E-Challan System</title>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 10000); // Slide image every 2 seconds
+            }
+        });
+    </script>
+    <div class="loader">
+        <img src="./icon/animation/AqA0.gif" alt="Loading....">
+    </div>
+
+    <header>
+        <div class="logo-nav">
+            <img src="./icon/logo.png" alt="logo">
+        </div>
+        <div class="headName-nav">
+            <h3>ई-चालान प्रणाली</h3>
+            <h3>E-CHALLAN SYSTEM</h3>
+        </div>
+        <div class="iconImg-nav">
+            <img src="./icon/NHAI-Black.png" alt="logo img">
+        </div>
+        <nav>
+            <div class="contain-nav">
+                <div class="home-nav" onclick="afterLogOut()">
+                    <img src="./mini-icon/680-6800118_home-icon-png-transparent.png" alt="home">
+                    <h4>HOME</h4>
+                </div>
+                <div class="account-nav">
+                    <img src="./mini-icon/admin-icon2.png" alt="account">
+                    <h4>ACCOUNT</h4>
+                    <div class="ac-container-nav">
+                        <div class="login-nav" onclick="togglePopup()">
+                            <img src="./mini-icon/iconmonstr-log-out-4-240.png" alt="login">
+                            <h4>OFFICER SIGN IN</h4>
+                        </div>
+                        <div class="create-nav" onclick="reg_officer()">
+                            <img src="./mini-icon/iconmonstr-id-card-22-240.png" alt="cr ac img">
+                            <h4>APPLY FOR OFFICER ACCOUNT</h4>
+                        </div>
+                        <div class="create-nav" onclick="togglePopup2()">
+                            <img src="./mini-icon/iconmonstr-id-card-22-240.png" alt="admin icon img">
+                            <h4>ADMIN LOGIN</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="rules-nav" onclick="rules()">
+                    <img src="./mini-icon/Mediamodifier-Design-Template (2).png" alt="rules img">
+                    <h4>TRAFFIC RULES</h4>
+                </div>
+                <div class="about-nav" onclick="">
+                    <img src="./mini-icon/question_mark.svg" alt="help img">
+                    <h4>HELP</h4>
+                </div>
+                <div class="about-nav" onclick="">
+                    <img src="./mini-icon/about-256.png" alt="about img">
+                    <h4>ABOUT US</h4>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <br>
+    <div class="banner">
+        <div class="mySlides fade">
+            <img src="./traffic-image/traffic1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./traffic-image/traffic2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./traffic-image/traffic3.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./traffic-image/traffic4.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./traffic-image/traffic5.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./traffic-image/traffic6.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./traffic-image/traffic7.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./traffic-image/traffic8.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./road-img/Banner7.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./road-img/Banner8.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./road-img/Banner9.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./road-img/Banner10.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="nextSlides(-1)">&#10094;</a>
+        <a class="next" onclick="nextSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <div class="HomePanelDiv">
+        <div class="leftDiv">
+            <div class="loginDiv" onclick="togglePopup()">
+                <img class="logo" src="./icon/Icons/mid-icon.jpg" alt="img">
+                <hr class="hLine">
+                <h6 class="atb">Sign In Here</h6>
+            </div>
+        </div>
+        <div class="rightDiv">
+            <div class="loginDiv" onclick="challanPayment()">
+                <img class="logo" src="./icon/Icons/license-plate (1).png" alt="img">
+                <hr class="hLine">
+                <h6 class="atb">Pay Your Vehicle Fine</h6>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="popup" id="popup">
+        <div class="popupOverlay" onclick="togglePopup()"></div>
+        <div class="content">
+            <div class="closebtn" onclick="togglePopup()">&times;</div>
+            <div class="popDiv">
+                <form class="frm" id="loginForm" name="loginForm" method="POST" action="">
+                    <h2>Officer Login</h2>
+                    <hr>
+                    <div class="username">
+                        <input class="inpt userId1" placeholder=" " type="text" name="userName" id="userId" size="20" required>
+
+                        <label for="usrname">Username/ID Number</label>
+                        <img src="./icon/Icons/small-icon (12).png" alt="username_icon">
+                    </div>
+                    <div class="pass">
+                        <input class="inpt pswd1" type="password" placeholder=" " name="password" id="password" size="20" required>
+                        <label for="psw">Password </label>
+                        <img src="./icon/Icons/small-icon (8).png" alt="password_icon">
+                    </div>
+                    <input class="btnLog" type="submit" name="submit" id="submit" value="Submit">
+                </form>
+                <div id="err"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="popup" id="popup2">
+        <div class="popupOverlay" onclick="togglePopup2()"></div>
+        <div class="content">
+            <div class="closebtn" onclick="togglePopup2()">&times;</div>
+            <div class="popDiv">
+                <form class="frm" id="adminLoginForm" name="loginForm" method="POST" action="">
+                    <h2>Admin Login</h2>
+                    <hr>
+                    <div class="username">
+                        <input class="inpt userId2" placeholder=" " type="text" name="userName" id="userId" size="20" required>
+
+                        <label for="usrname">Admin Username</label>
+                        <img src="./icon/Icons/small-icon (12).png" alt="username_icon">
+                    </div>
+                    <div class="pass">
+                        <input class="inpt pswd2" type="password" placeholder=" " name="password" id="password" size="20" required>
+                        <label for="psw">Password </label>
+                        <img src="./icon/Icons/small-icon (8).png" alt="password_icon">
+                    </div>
+                    <input class="btnLog" type="submit" name="submit" id="submit" value="Submit">
+                </form>
+                <div id="err" class="err2"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="foot-contain">
+        <div class="card1">
+            <div class="pendingCase mini-card">
+                <img src="./mini-icon/foot-check icon/warning.png" alt="case icon">
+                <hr>
+                <h4>PENDING CASES</h4>
+                <h5 class="tNum1">0</h5>
+                <h5>This Month</h5>
+                <div class="num"></div>
+            </div>
+            <div class="disposCase mini-card">
+                <img src="./mini-icon/foot-check icon/file success.svg" alt="case icon">
+                <hr>
+                <h4>DISPOSED CASES</h4>
+                <h5 class="tNum2">0</h5>
+                <h5>This Month</h5>
+                <div class="num"></div>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="pendingAmt mini-card">
+                <img src="./mini-icon/foot-check icon/money.svg" alt="case icon">
+                <hr>
+                <h4>PENDING REVENUE</h4>
+                <h5 class="tNum3">0</h5>
+                <h5>This Month</h5>
+                <div class="num"></div>
+            </div>
+            <div class="collectedAmt mini-card">
+                <img src="./mini-icon/foot-check icon/money db.png" alt="case icon">
+                <hr>
+                <h4>COLLECTED REVENUE</h4>
+                <h5 class="tNum4">0</h5>
+                <h5>This Month</h5>
+                <div class="num"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jQuery.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/sliding.js"></script>
+
+</html>
