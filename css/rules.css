@@ -1,0 +1,128 @@
+/* TABLES DESIGNING */
+
+.thirdDiv {
+    display: flex;
+    margin: 2%;
+}
+
+.thirdOne,
+.thirdTwo {
+    margin-left: 5%;
+    max-width: 50%;
+}
+
+.thirdHead {
+    font-size: 26px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.thirdOne li,
+.thirdTwo li {
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+/* List OF Rules Violation Designing */
+
+.mainHead {
+    font-size: 36px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    text-decoration: underline;
+    margin-bottom: 5%;
+}
+
+table {
+    align-content: center;
+    text-align: center;
+}
+
+tr,
+td,
+th {
+    border: 0.5px solid black;
+    border-radius: 6px;
+}
+
+th {
+    background-color: rgba(136, 191, 255, 0.301);
+}
+
+tr {
+    background-color: rgba(250, 128, 114, 0.068);
+}
+
+tr:nth-of-type(odd) {
+    background-color: rgba(255, 132, 44, 0.137);
+}
+
+.mainDiv {
+    display: flex;
+    max-width: fit-content;
+    margin: 20px;
+    margin-left: 8%;
+}
+
+.div2 {
+    margin-left: 12%;
+}
+
+.div3 {
+    margin-left: 90px;
+    max-width: 35%;
+}
+
+.mainDiv2 {
+    display: flex;
+    max-width: fit-content;
+    margin: 20px;
+    margin-left: 25px;
+}
+
+.div4 {
+    margin-left: 6%;
+}
+
+.div5 {
+    margin-left: 30%;
+    max-width: fit-content;
+}
+
+.div6 {
+    max-width: fit-content;
+    margin-left: 3%;
+}
+
+.div7 {
+    max-width: fit-content;
+    margin-left: 8%;
+}
+
+.div8 {
+    max-width: 81%;
+    margin-left: 8%;
+}
+
+.div9 {
+    max-width: fit-content;
+    margin-left: 12%;
+}
+
+.head {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tHead {
+    font-size: 20px;
+    text-align: center;
+}
+
+.tRow {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,536 @@
+.purposeName {
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    height: auto;
+    padding: 15px;
+    color: rgb(0, 145, 65);
+    margin-top: 3%;
+    animation: gradi 10s ease-in 0s infinite alternate;
+}
+
+@keyframes gradi {
+    from {
+        background-color: rgba(255, 229, 82, 0.479);
+    }
+    to {
+        background: goldenrod;
+    }
+}
+
+
+/* FORM DESIGNING */
+
+.details {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid black; */
+    max-width: fit-content;
+    max-height: auto;
+    padding-bottom: 50px;
+    border-radius: 40px;
+}
+
+
+/* Flipping style */
+
+.firstDiv {
+    transition: all 1s ease;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    background: white;
+    margin: auto;
+    padding-top: 120px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-right: 100px;
+    max-width: fit-content;
+    max-height: fit-content;
+    border-radius: 40px;
+    box-shadow: -4px -4px 15px grey, 4px 4px 15px grey;
+}
+
+.chNum {
+    backface-visibility: hidden;
+    max-width: max-content;
+    max-height: max-content;
+    margin: auto;
+    min-width: 100%;
+    max-height: 100%;
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    font-size: 20px;
+    justify-content: center;
+    flex-direction: column;
+    /* row-gap: 20px; */
+}
+
+.numberCheck {
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin-bottom: 10%;
+}
+
+.numberCheck>label {
+    border: 1px solid gray;
+    border-radius: 10px;
+    max-width: max-content;
+    max-height: max-content;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+#chalNum,
+#vehNum,
+#licNum {
+    visibility: hidden;
+    appearance: none;
+}
+
+#chalNum:checked~label[for="chalNum"],
+#vehNum:checked~label[for="vehNum"],
+#licNum:checked~label[for="licNum"] {
+    /* border: none; */
+    /* background-color: #2e2fd0; */
+    border: 3px solid #2e2fd0;
+    background-color: whitesmoke;
+    /* background-color: rgba(4, 4, 161, 0.781); */
+    /* color: white; */
+}
+
+.inptCheck {
+    align-self: center;
+    text-align: center;
+    color: blue;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid gray;
+    font-size: 20px;
+}
+
+.inptCheck:focus {
+    border-bottom: 2px solid blue;
+}
+
+.numSec {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+}
+
+.btnSubmit {
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #2e2fce;
+    color: white;
+    border: 1px solid gray;
+    width: 60%;
+    height: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnSubmit:hover {
+    background-color: #4142d4;
+}
+
+.btnSubmit:focus {
+    background-color: whitesmoke;
+    color: #5a5bda;
+}
+
+#numFlip:checked~.firstDiv {
+    transform: rotateX(180deg);
+}
+
+#flipLbl {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
+    text-align: center;
+    width: 40%;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-right: auto;
+    color: #0e0f42;
+    cursor: pointer;
+    /* visibility: hidden; */
+}
+
+#flipLbl:hover {
+    /* background-color: #17186a; */
+    border: 2px solid #0e0f42;
+}
+
+#numFlip {
+    visibility: hidden;
+}
+
+
+/* Second Page */
+
+.secForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 650px;
+    height: 550px;
+    padding-top: 10%;
+    backface-visibility: hidden;
+    /* visibility: hidden; */
+    /* background: tomato; */
+    transform: rotateX(180deg);
+}
+
+.backDiv {
+    display: block;
+    margin-right: auto;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.backDiv label {
+    color: rgba(0, 68, 255, 0.753);
+    background-color: rgb(235, 235, 235);
+    border: none;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.backDiv label:hover {
+    color: rgb(0, 68, 255);
+    background-color: rgb(212, 212, 212);
+}
+
+.secForm h2 {
+    font-size: 34px;
+    color: darkblue;
+    text-shadow: 2px 2px 8px gray;
+    margin-bottom: 15%;
+}
+
+.name,
+.fine,
+.bnkNum,
+.pass {
+    font-size: 20px;
+    position: relative;
+    color: gray;
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.secForm div>input {
+    width: 400px;
+}
+
+.name>label,
+.fine>label,
+.bnkNum>label,
+.pass>label {
+    transform: translate(20px, -30px);
+    z-index: -2;
+    position: absolute;
+    transition: all 1s;
+    padding-left: 2px;
+    padding-right: 2px;
+    background: white;
+}
+
+#name:focus~label,
+#name:not(:placeholder-shown)~label,
+#amountPay:focus~label,
+#amountPay:not(:placeholder-shown)~label,
+#bnkNo:focus~label,
+#bnkNo:not(:placeholder-shown)~label,
+#pas:focus~label,
+#pas:not(:placeholder-shown)~label {
+    transform: translate(10px, -45px);
+    color: black;
+    z-index: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.inpt {
+    font-size: 20px;
+    color: blue;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 0;
+    text-align: center;
+    border: none;
+    background: transparent;
+    border: 1.7px solid gray;
+    border-radius: 10px;
+}
+
+.inpt:focus {
+    border: 2px solid blue;
+}
+
+.inptCheck::placeholder {
+    font-style: italic;
+    font-size: 16px;
+}
+
+.inpt::-webkit-inner-spin-button,
+.inpt::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+#submitBtn {
+    padding-top: 10px;
+    height: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    background-color: blue;
+    opacity: 0.75;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+    background-color: rgba(47, 0, 255, 0.774);
+}
+
+#submitBtn:focus {
+    background-color: white;
+    color: blue;
+}
+
+
+/* Show Challan Container Design */
+
+.secDiv {
+    width: 850px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: inset -2px -2px 8px gray, inset 2px 2px 8px gray;
+    /* background-image: url('../img/challanPayment/badge-verified-bg.png'); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.secDiv div {
+    /* background-color: transparent; */
+}
+
+.fine-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.fine-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background-color: #002b63;
+    color: white;
+    margin: 0px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.hname {
+    margin-right: 50px;
+}
+
+.fine-nav img {
+    width: 30px;
+    height: auto;
+    display: block;
+    margin-left: 20px;
+    margin-right: 30px;
+    content: url('/E-Challan/icon/logo.png');
+}
+
+.fine-ch {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 18px;
+}
+
+.fine-detail {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail1 {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.subDetail1 {
+    display: block;
+    width: 400px;
+}
+
+.subDetail2 h4 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.subDetail2 td,
+.subDetail2 th {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.detail2 {
+    width: 400px;
+    height: 200px;
+    border: none;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10px;
+    box-shadow: -2px -2px 8px gray, 2px 2px 8px gray;
+}
+
+.fine-final {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.fine-final img {
+    margin-left: -100px;
+    width: 70px;
+    height: 30px;
+    opacity: 0.8;
+    content: url('/E-Challan/traffic-image/traffic3.png');
+}
+
+.pdfDiv {
+    display: block;
+    margin: auto;
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+    /* background-color: rebeccapurple; */
+}
+
+.pdfBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* border: 0.5px solid gray; */
+    border: none;
+    background-color: rgba(219, 219, 219, 0.562);
+    color: rgba(0, 0, 177, 0.623);
+    box-shadow: 2px 2px 5px gray;
+}
+
+.pdfBtn img {
+    width: 30px;
+    height: 30px;
+}
+
+.pdfBtn:hover {
+    background-color: rgba(219, 219, 219, 0.962);
+    color: rgba(0, 0, 177, 0.923);
+    box-shadow: inset 2px 2px 4px rgba(128, 128, 128, 0.596), 2px 2px 5px rgba(128, 128, 128, 0.596);
+}
+
+.complaintContainer {
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.subCmplntDiv,
+.msgCmplntDiv {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.subCmplntDiv input[type="text"],
+#cmpltMsg {
+    width: 400px;
+    height: 40px;
+    outline: none;
+    color: #2e2fce;
+    font-size: 20px;
+    padding: 4px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+#cmpltMsg {
+    height: 100px;
+}
+
+.cmpltBtn {
+    padding: 5px;
+    width: 100px;
+    margin-top: 10px;
+    font-size: 14px;
+}

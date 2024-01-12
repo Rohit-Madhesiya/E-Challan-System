@@ -1,0 +1,1115 @@
+.idDiv {
+    max-width: 100%;
+    max-height: fit-content;
+    height: fit-content;
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin-top: 15px; */
+    color: white;
+    border-radius: 10px;
+    background-color: #002b63;
+}
+
+.logoDiv img {
+    align-self: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    box-shadow: 1px 1px 3px rgba(42, 39, 255, 0.596);
+    border: none;
+    border-radius: 50%;
+    /* padding: 2px; */
+    width: 65px;
+    height: 65px;
+    background: white;
+}
+
+.userName {
+    margin-left: 15px;
+    font-size: 14px;
+    width: auto;
+    /* text-decoration: underline; */
+    text-align: center;
+    margin-bottom: auto;
+    padding: auto;
+    align-self: center;
+}
+
+.off-nav {
+    /* background-color: red; */
+    display: flex;
+    margin: auto;
+    /* margin-top: 30px; */
+    padding: auto;
+    column-gap: 30%;
+    width: max-content;
+    height: max-content;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.off-nav div {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 5px;
+    /* padding-right: 10px; */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.off-home:hover {
+    background-color: rgba(0, 0, 255, 0.548);
+}
+
+.off-home img {
+    width: 20px;
+    height: auto;
+}
+
+.off-home span {
+    position: absolute;
+    align-self: flex-end;
+    text-align: center;
+    /* text-justify: auto; */
+    background-color: red;
+    padding: 3px;
+    /* margin: auto; */
+    margin-left: 8px;
+    margin-top: -10px;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    /* right: 5px; */
+    font-size: 12px;
+    font-weight: bold;
+    /* top: -5px; */
+}
+
+.off-home i {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.off-msg {
+    display: block;
+    margin-left: 50%;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.off-msg span {
+    margin-top: -10px;
+    margin-left: -5px;
+    padding: 4px;
+    background-color: rgb(0, 180, 0);
+}
+
+.logout {
+    margin-right: 20px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: all .2s;
+}
+
+.logout:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.mainDiv-main {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    padding: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: inset 2px 2px 8px gray, inset 2px 2px 8px gray;
+}
+
+.fineDiv {
+    /* border: 2px solid black; */
+    width: 50%;
+    height: auto;
+    /* margin-right: 5%; */
+    /* border: 1.5px solid green; */
+    border-radius: 15px;
+    /* box-shadow: inset 2px 2px 8px gray, inset 2px 2px 8px gray; */
+}
+
+.fineHead {
+    font-size: 34px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    /* justify-content: center; */
+    text-decoration: underline;
+    margin-top: 10px;
+    /* max-width: 100%; */
+    /* max-height: fit-content; */
+}
+
+.imgDiv {
+    position: relative;
+    margin-left: auto;
+    margin-top: auto;
+    margin-right: auto;
+    /* max-height: fit-content; */
+    width: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    background: wheat;
+    border: none;
+    box-shadow: -1px -1px 5px black, 1px 1px 5px black;
+}
+
+.imgDiv:hover {
+    box-shadow: -3px -3px 20px rgba(0, 0, 0, 0.644), 3px 3px 20px rgba(0, 0, 0, 0.61);
+}
+
+.vehImg {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.cameraImg {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    z-index: 1;
+}
+
+.inptImg {
+    position: absolute;
+    z-index: 2;
+    min-height: 100%;
+    min-width: 100%;
+    cursor: pointer;
+    /* background-color: black; */
+    opacity: 0;
+}
+
+.inptImg::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.inptImg::before {
+    content: "";
+    display: inline;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.filDiv {
+    margin-top: 5%;
+    /* margin: auto; */
+    margin-left: 10px;
+    margin-right: 10px;
+    /* margin-left: 5%; */
+    font-size: 19px;
+    /* border: 1.5px solid blue; */
+    min-width: fit-content;
+    min-height: fit-content;
+    max-height: fit-content;
+    max-width: max-content;
+    margin-bottom: 3%;
+}
+
+.numDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.numDiv>input {
+    appearance: none;
+}
+
+.numDiv>label {
+    border: 2px solid gray;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#rc_number:checked~label[for="rc_number"],
+#chasis_number:checked~label[for="chasis_number"],
+#license_number:checked~label[for="license_number"] {
+    background-color: blue;
+    opacity: 0.7;
+    border: none;
+    color: white;
+}
+
+.vehLbl,
+.addLbl,
+.penaltyLbl {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: -70px;
+    color: gray;
+    z-index: -1;
+    transition: all 50ms ease;
+}
+
+.dateDiv {
+    margin-bottom: 20px;
+    margin-left: -100px;
+}
+
+.dateDiv>label {
+    color: black;
+    margin-left: -380px;
+    margin-top: auto;
+}
+
+.dateDiv>input {
+    margin-left: 150px;
+    width: 220px;
+    height: 30px;
+    background: transparent;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none;
+}
+
+.Inpt {
+    position: relative;
+    background: transparent;
+    border: 1.7px solid gray;
+    outline: none;
+    border-radius: 10px;
+    width: 500px;
+    height: 38px;
+    display: flex;
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 18px;
+    color: blue;
+    margin-bottom: 40px;
+}
+
+.reasonDiv {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+}
+
+.reasonDiv>select {
+    background: transparent;
+    width: 600px;
+    height: 45px;
+    border: 1.7px solid gray;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* padding: 10px; */
+    /* padding-left: 15px; */
+    font-size: 18px;
+    margin-bottom: 20px;
+    /* margin-right: auto; */
+}
+
+.reasonDiv>option {
+    font-size: 18px;
+    text-align: center;
+}
+
+.checkBtn {
+    padding: 8px;
+    /* padding-top: 5px; */
+    /* padding-bottom: 5px; */
+    font-size: 14px;
+    /* font: bold; */
+    cursor: pointer;
+    background-color: blue;
+    opacity: 0.6;
+    margin-left: 20px;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    /* margin: auto; */
+    border-radius: 8px;
+    color: white;
+    /* transition: all 50ms ease; */
+}
+
+.checkBtn:hover {
+    background-color: blue;
+    opacity: 0.8;
+}
+
+.Inpt:focus~label,
+.Inpt:not(:placeholder-shown)~label {
+    transform: translate(-20px, -20px);
+    color: black;
+    z-index: 0;
+    font-size: 16px;
+    background-color: whitesmoke;
+}
+
+.Inpt:focus {
+    border: 2px solid blue;
+}
+
+.secFillDiv {
+    display: flex;
+    flex-direction: column;
+    gap: -20px;
+    align-items: center;
+}
+
+.btnDone {
+    cursor: pointer;
+    font-size: 18px;
+    font: bold;
+    background-color: rgba(37, 37, 255, 0.849);
+    color: white;
+    border: none;
+    width: 500px;
+    border-radius: 5px;
+    padding: 10px;
+    font: bold;
+}
+
+.btnDone:hover {
+    box-shadow: -2px -2px 8px gray, 2px 2px 8px gray;
+    background-color: rgb(19, 19, 255);
+}
+
+
+/* SECOND DIV DESIGNING */
+
+.secDiv {
+    /* border:  2px solid black; */
+    width: fit-content;
+    padding: auto;
+    /* margin: auto; */
+    text-align: center;
+    color: rgb(0, 0, 180);
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.line {
+    width: 1px;
+    margin: 5px;
+    height: 100%;
+    border-radius: 50%;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: -2px -2px 20px gray, 2px 2px 20px gray;
+    float: left;
+}
+
+.tableDiv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    /* margin: auto; */
+    margin-left: 20px;
+    /* border: 2px solid blue; */
+}
+
+.tableDiv td,
+.tableDiv th {
+    /* width: fit-content; */
+    /* padding: auto; */
+    /* padding-top: 5px; */
+    /* padding-bottom: 5px; */
+    /* margin-right: 15px; */
+    padding-right: 20px;
+    padding-left: 20px;
+    border: none;
+    text-align: center;
+}
+
+.tableDiv th {
+    color: black;
+}
+
+.tableDiv td {
+    color: blue;
+    font-size: 14px;
+}
+
+.remBtn {
+    width: fit-content;
+    height: auto;
+    padding: 5px;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.63);
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.remBtn:hover {
+    background-color: rgba(255, 0, 0, 0.747);
+}
+
+.remBtn:focus {
+    background-color: white;
+    color: rgba(255, 0, 0, 0.63);
+}
+
+
+/* Verification container design */
+
+.main-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    /* column-gap: 10%; */
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid green; */
+    /* padding: 5%; */
+    width: 300px;
+    height: 100%;
+    align-items: center;
+    row-gap: 5%;
+    justify-content: center;
+}
+
+.nav-list div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+    /* padding: 10px; */
+    margin: 20px;
+    text-align: center;
+}
+
+.pages-div {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.page {
+    position: relative;
+    display: none;
+    animation-name: fade;
+    animation-duration: .1s;
+    border-radius: 20px;
+    box-shadow: -2px -2px 8px gray, 2px 2px 8px gray;
+}
+
+.li-btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 250px;
+    height: 50px;
+    margin: auto;
+    background-color: rgba(0, 0, 107, 0.63);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font: 20px;
+    font-weight: bold;
+}
+
+.li-btn:hover {
+    background-color: rgba(0, 0, 107, 0.904);
+}
+
+.li-btn-after {
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+}
+
+.li-btn-after:hover {
+    background-color: rgba(135, 207, 235, 0.164);
+    color: rgba(0, 0, 107, 0.904);
+    border: 2px solid rgba(0, 0, 107, 0.904);
+}
+
+.page-front {
+    display: flex;
+    /* flex-direction: column; */
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.page-front h4 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.page-front input[type='text'] {
+    position: relative;
+    outline: none;
+    width: 520px;
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-right: 20px;
+    color: blue;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: transparent;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.page-front input[type='text']:focus {
+    border: 2px solid navy;
+}
+
+.page-front label {
+    position: absolute;
+    font-size: 20px;
+    padding: 3px;
+    background: white;
+    transform: translate(-100px);
+    transition: all .2s;
+    color: gray;
+    z-index: -1;
+}
+
+.page-front input[type='text']:focus~label,
+.page-front input[type='text']:not(:placeholder-shown)~label {
+    font-size: 14px;
+    text-transform: uppercase;
+    z-index: 1;
+    color: black;
+    transform: translate(-190px, -18px);
+}
+
+
+/* .page-front input[type='submit'] {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    margin: auto;
+    display: block;
+    position: relative;
+    margin-bottom: auto;
+    color: white;
+    cursor: pointer;
+    background-color: lightseagreen;
+} */
+
+.page-front input[type='submit'] {
+    /* appearance: button; */
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    /* font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif; */
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    /* margin: 12px 0 0; */
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+}
+
+.page-front input[type='submit']:disabled {
+    cursor: default;
+}
+
+.page-front input[type='submit']:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.page-back {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+/* License Details Style */
+
+.lic-heading,
+.rc-heading {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.lic-holder-data {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    padding: 5px;
+}
+
+.lic-holder-d1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 400px;
+    height: fit-content;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.lic-holder-name,
+.lic-holder-isdate {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.lic-holder-name h6,
+.lic-holder-isdate h6 {
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.lic-holder-d2 {
+    width: 200px;
+    height: 150px;
+    border: 1px solid gray;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    background-color: greenyellow;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.lic-holder-d3 {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+.lic-val-detail,
+.lic-cov-detail {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+}
+
+.lic-val-head {
+    display: block;
+}
+
+.inptTxt {
+    color: blue;
+}
+
+.inptTxt2 {
+    color: blue;
+    font-weight: normal;
+}
+
+
+/* RC Details Style */
+
+.rc-detail1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: fit-content;
+}
+
+.rc-reg-num {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.rc-reg-num h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.puc-table {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.puc-table td,
+.puc-table th {
+    width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/* Issued Challan Styling */
+
+.issuedChallanDiv {
+    background-color: white;
+    border: none;
+    color: black;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    z-index: 2;
+    position: absolute;
+    padding: 5px;
+    top: 27%;
+    left: 44%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.issuedChTable,
+.offMsgTable {
+    background-color: white;
+    padding: 10px;
+    font-size: 18px;
+    border-collapse: separate;
+}
+
+.issuedChTable th,
+.issuedChTable td {
+    background-color: white;
+    border: none;
+    border-radius: 0px;
+    /* width: 120px; */
+    color: black;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.offMsgTable th,
+.offMsgTable td {
+    background-color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 0px;
+    color: black;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.issuedChBody tr {
+    background-color: transparent;
+}
+
+
+/* Message Container Style */
+
+.msg-container {
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    border-radius: 15px;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    top: 240px;
+    right: 140px;
+    z-index: 2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+
+/* Profile Page Flipping in mainDiv */
+
+.mainPageDiv {
+    overflow: hidden;
+    display: inline-block;
+    padding: 5px;
+}
+
+.mainPage {
+    transform-style: preserve-3d;
+    transition: all .5s;
+    transform-origin: center;
+}
+
+.rotateMainPage {
+    transform-origin: center;
+    transform: rotateY(180deg);
+}
+
+.mainPageFront {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    height: fit-content;
+    backface-visibility: hidden;
+}
+
+.mainPageBack {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 0px;
+    left: 50%;
+    text-align: center;
+    transform-origin: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    /* box-shadow: inset 2px 2px 8px gray, inset 2px 2px 8px gray; */
+}
+
+.offProfileContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.offProfileContainer h4,
+.offProfileContainer h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0px;
+    font-size: 16px;
+    width: max-content;
+}
+
+.offP1 {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 10px;
+}
+
+.offPImg {
+    display: flex;
+    flex-direction: column;
+}
+
+.offPImg img {
+    border-radius: 10px;
+}
+
+#offPImg {
+    width: 100px;
+    height: 70px;
+}
+
+#offPSign {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 30px;
+}
+
+.offPName {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+}
+
+.offP2 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.offPuser {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#offPLastSeen {
+    color: gray;
+}
+
+.offPuser button {
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1rem 1.6rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.offPuser button:hover {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+.adminMsgPop {
+    width: max-content;
+    height: max-content;
+    display: inline-block;
+}
+
+.mainPageDiv {
+    display: inline;
+}
+
+.adminPopFront {
+    /* backdrop-filter: hidden; */
+    backface-visibility: hidden;
+}
+
+.adminPopBack {
+    position: absolute;
+    margin: auto;
+    width: 500px;
+    padding: auto;
+    left: 0%;
+    height: 300px;
+    backface-visibility: hidden;
+}
+
+
+/* Issued Challan Pdf Button CSS */
+
+.pdfDiv {
+    display: block;
+    margin-left: auto;
+    margin-top: auto;
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+    /* background-color: rebeccapurple; */
+}
+
+.pdfBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* border: 0.5px solid gray; */
+    border: none;
+    background-color: rgba(219, 219, 219, 0.562);
+    color: rgba(0, 0, 177, 0.623);
+    box-shadow: 2px 2px 5px gray;
+}
+
+.pdfBtn img {
+    width: 30px;
+    height: 30px;
+}
+
+.pdfBtn:hover {
+    background-color: rgba(219, 219, 219, 0.962);
+    color: rgba(0, 0, 177, 0.923);
+    box-shadow: inset 2px 2px 4px rgba(128, 128, 128, 0.596), 2px 2px 5px rgba(128, 128, 128, 0.596);
+}

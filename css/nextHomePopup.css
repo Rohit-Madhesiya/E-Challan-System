@@ -1,0 +1,85 @@
+.popup .popupOverlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: fit-content;
+    height: fit-content;
+    z-index: 2;
+    /* text-align: center; */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup .closebtn {
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    height: 30px;
+    width: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.closebtn:hover {
+    background-color: red;
+    color: black;
+    cursor: pointer;
+}
+
+.popup.active .popupOverlay {
+    display: block;
+    backdrop-filter: blur(5px);
+    background: transparent;
+}
+
+.popup.active .content {
+    transition: all 200ms;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popDiv {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.content {
+    border: solid transparent;
+    border-radius: 18px;
+    margin-top: 20%;
+    box-shadow: -4px -4px 25px 5px rgba(0, 0, 0, 0.644), 4px 4px 25px 5px rgba(0, 0, 0, 0.644);
+}
+
+.adminPopFront {
+    align-items: center;
+    text-align: center;
+}
+
+#msgAdminInput {
+    width: 300px;
+    padding: 4px;
+    height: 80px;
+    border: 1px solid gray;
+    font-size: 18px;
+    color: blue;
+    border-radius: 10px;
+    outline: none;
+}

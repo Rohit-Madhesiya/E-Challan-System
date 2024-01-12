@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+/* Slideshow container */
+
+.banner {
+    max-width: auto;
+    top: -20px;
+    position: relative;
+    margin: auto;
+    max-height: 50%;
+}
+
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    border-radius: 10px;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: black;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* #Loader Designing*/
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.397);
+}
+
+.loader_finish {
+    display: none;
+    pointer-events: none;
+}
+
+.loader img {
+    width: fit-content;
+    height: auto;
+    margin-left: 45%;
+    margin-top: 25%;
+    position: fixed;
+}
+
+
+/* Division Designing Started */
+
+.HomePanelDiv {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.loginDiv {
+    padding: 20px;
+}
+
+.logo {
+    border: none;
+    box-shadow: -2px -2px whitesmoke, 2px 2px whitesmoke;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: 25%; */
+    /* margin-top: 2%; */
+}
+
+.atb {
+    font-size: 24px;
+    font-style: oblique;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.leftDiv,
+.rightDiv {
+    height: fit-content;
+    padding: 20px;
+    width: 400px;
+    border-radius: 50px;
+    box-shadow: inset -4px -4px 8px rgba(66, 66, 66, 0.473), inset 4px 4px 8px rgba(66, 66, 66, 0.473);
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.leftDiv:hover,
+.rightDiv:hover {
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.521), 5px 5px 10px rgba(0, 0, 0, 0.288);
+}
+
+
+/* LOGIN AND PAYCHALLAN CARDS HORIZONTAL LINES DESIGNING */
+
+.hLine {
+    margin-top: 14px;
+    background-color: rgb(104, 103, 103);
+    border: 0.5px solid rgb(136, 136, 136);
+    width: 100%;
+}
+
+
+/* foot-container styling */
+
+.foot-contain {
+    margin-top: 80px;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card1,
+.card2 {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 80px;
+}
+
+.mini-card {
+    border: 1px solid gray;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100px;
+    color: white;
+    border: none;
+    box-shadow: inset -4px -4px 8px gray;
+}
+
+.mini-card h4 {
+    margin-top: -8px;
+    font-size: 20px;
+}
+
+.mini-card h5 {
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.mini-card hr {
+    height: 100%;
+    width: 3px;
+    background-color: white;
+    border: white;
+    border-radius: 50%;
+    margin: 0px;
+    padding: 0px;
+    transform: rotate(15deg);
+}
+
+.mini-card img {
+    margin: 5px;
+    width: 50px;
+    height: auto;
+}
+
+.num {
+    position: absolute;
+}
+
+.pendingCase {
+    background-color: #0c0032;
+}
+
+.disposCase {
+    background-color: #2e1114;
+}
+
+.pendingAmt {
+    background-color: #78244c;
+}
+
+.collectedAmt {
+    background-color: #112d32;
+}
