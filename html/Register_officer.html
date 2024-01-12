@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officer's Registration</title>
+    <link rel="stylesheet" href="../css/Register_officer.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-nav">
+            <img src="../icon/logo.png" alt="logo">
+        </div>
+        <div class="headName-nav">
+            <h3>ई-चालान प्रणाली</h3>
+            <h3>E-CHALLAN SYSTEM</h3>
+        </div>
+        <div class="iconImg-nav">
+            <img src="../icon/NHAI-Black.png" alt="logo img">
+        </div>
+        <nav>
+            <div class="contain-nav">
+                <div class="home-nav" onclick="homeJump()">
+                    <img src="../mini-icon/680-6800118_home-icon-png-transparent.png" alt="home">
+                    <h4>HOME</h4>
+                </div>
+                <div class="account-nav">
+                    <img src="../mini-icon/admin-icon2.png" alt="account">
+                    <h4>ACCOUNT</h4>
+                    <div class="ac-container-nav">
+                        <div class="login-nav" onclick="homeJump()">
+                            <img src="../mini-icon/iconmonstr-log-out-4-240.png" alt="login">
+                            <h4>OFFICER SIGN IN</h4>
+                        </div>
+                        <div class="create-nav" onclick="reg_officerJump()">
+                            <img src="../mini-icon/iconmonstr-id-card-22-240.png" alt="cr ac img">
+                            <h4>APPLY FOR OFFICER ACCOUNT</h4>
+                        </div>
+                        <div class="create-nav" onclick="homeJump()">
+                            <img src="../mini-icon/iconmonstr-id-card-22-240.png" alt="admin icon img">
+                            <h4>ADMIN LOGIN</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="rules-nav" onclick="rulesJump()">
+                    <img src="../mini-icon/Mediamodifier-Design-Template (2).png" alt="rules img">
+                    <h4>TRAFFIC RULES</h4>
+                </div>
+                <div class="about-nav" onclick="">
+                    <img src="../mini-icon/question_mark.svg" alt="help img">
+                    <h4>HELP</h4>
+                </div>
+                <div class="about-nav" onclick="">
+                    <img src="../mini-icon/about-256.png" alt="about img">
+                    <h4>ABOUT US</h4>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="regDiv">
+        <h2 class="heading">Create your Officer Account</h2>
+        <hr>
+        <form action="" method="POST" class="regForm" enctype="multipart/form-data" id="officer_form">
+            <div class="picDiv">
+                <div class="profileDiv" id="profileDiv">
+                    <img src="../icon/upload-icon/profile/768px-Circle-icons-profile.svg.png" alt="profile photo" class="profileImg" id="profileImg">
+                    <input type="file" name="imgInpt" id="imgInpt" class="imgInpt">
+                    <span id="profUploadHint" onclick="">Upload Profile Picture</span>
+                </div>
+                <div class="signDiv" id="signDiv">
+                    <img src="../icon/upload-icon/sign/SignIcon_generated.jpg" alt="Signature Image" class="signImg" id="signImg">
+                    <input type="file" name="signImgInpt" id="signImgInpt" class="signImgInpt">
+                    <span id="signUploadHint" onclick="">Upload Signature</span>
+                </div>
+            </div>
+            <div class="firstInfo">
+                <div class="aadharDiv">
+                    <input type="number" name="aadhar" placeholder=" " id="aadhar" required maxlength="12">
+                    <label for="aadhar">Aadhaar Number</label>
+                </div>
+                <div class="uidNumberDiv">
+                    <input type="text" name="uidNo" id="uidNo" placeholder=" ">
+                    <label for="uidNumber">Officer Identification Number</label>
+                </div>
+                <div class="userNameDiv">
+                    <input type="text" name="userName" id="userName" placeholder=" ">
+                    <label for="userName">Username</label>
+                    <span class="userHint">You can only use letters, numbers & some symbols.</span>
+                </div>
+                <div class="pass">
+                    <div class="passDiv">
+                        <input type="password" name="pass" id="pass" placeholder=" ">
+                        <label for="pass">Password</label>
+                    </div>
+                    <div class="confPassDiv">
+                        <input type="password" name="confPass" id="confPass" placeholder=" ">
+                        <label for="pass">Confirm Password</label>
+                    </div>
+                    <span class="passHint">Use 8 or more characters with a mix of letters, numbers & symbols.</span>
+                </div>
+            </div>
+            <div class="secInfo">
+                <div class="dobDiv">
+                    <label for="birthday">Date Of Birth</label>
+                    <input type="date" name="birth" id="birth">
+                </div>
+                <div class="acConfirmDiv">
+                    <label for="confirmAcc">ID Verification</label>
+                    <select name="acChoice" id="acChoice" class="acChoice" required>
+                        <option value="none" disabled selected>----Choose----</option>
+                        <option value="admin">From Admin</option>
+                        <option value="permitNo">By Permit Number</option>
+                    </select>
+                </div>
+                <div class="permitNo">
+                    <input type="text" name="permitNo" placeholder=" " id="permitNo">
+                    <label for="permitNo">Permit Number</label>
+                </div>
+            </div>
+            <div class="doneDiv">
+                <div class="already">
+                    <input type="button" value="Sign in instead" onclick="homeJump()">
+                </div>
+                <div class="submitDiv">
+                    <input type="submit" name="submit" id="submit" value="Apply">
+                </div>
+            </div>
+            <div id="err"></div>
+        </form>
+    </div>
+
+
+</body>
+<script src="../js/main.js"></script>
+<script src="../js/jQuery.js"></script>
+<script src="../js/RegOfficerProf.js"></script>
+
+</html>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Rules</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/rules.css">
+    <script type="text/javascript" src="../js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-nav">
+            <img src="../icon/logo.png" alt="logo">
+        </div>
+        <div class="headName-nav">
+            <h3>ई-चालान प्रणाली</h3>
+            <h3>E-CHALLAN SYSTEM</h3>
+        </div>
+        <div class="iconImg-nav">
+            <img src="../icon/NHAI-Black.png" alt="logo img">
+        </div>
+        <nav>
+            <div class="contain-nav">
+                <div class="home-nav" onclick="homeJump()">
+                    <img src="../mini-icon/680-6800118_home-icon-png-transparent.png" alt="home">
+                    <h4>HOME</h4>
+                </div>
+                <div class="account-nav">
+                    <img src="../mini-icon/admin-icon2.png" alt="account">
+                    <h4>ACCOUNT</h4>
+                    <div class="ac-container-nav">
+                        <div class="login-nav" onclick="homeJump()">
+                            <img src="../mini-icon/iconmonstr-log-out-4-240.png" alt="login">
+                            <h4>OFFICER SIGN IN</h4>
+                        </div>
+                        <div class="create-nav" onclick="reg_officerJump()">
+                            <img src="../mini-icon/iconmonstr-id-card-22-240.png" alt="cr ac img">
+                            <h4>APPLY FOR OFFICER ACCOUNT</h4>
+                        </div>
+                        <div class="create-nav" onclick="homeJump()">
+                            <img src="../mini-icon/iconmonstr-id-card-22-240.png" alt="admin icon img">
+                            <h4>ADMIN LOGIN</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="rules-nav" onclick="">
+                    <img src="../mini-icon/Mediamodifier-Design-Template (2).png" alt="rules img">
+                    <h4>TRAFFIC RULES</h4>
+                </div>
+                <div class="about-nav" onclick="">
+                    <img src="../mini-icon/question_mark.svg" alt="help img">
+                    <h4>HELP</h4>
+                </div>
+                <div class="about-nav" onclick="">
+                    <img src="../mini-icon/about-256.png" alt="about img">
+                    <h4>ABOUT US</h4>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="thirdDiv" style="display: flex;">
+        <div class="thirdOne" style="width:50%;">
+            <div class="doTo">
+                <h3 class="thirdHead">Maintain safety on the roads with these safe driving tips</h3>
+                <ul class="todo">
+                    <li>Carry Your Documents In The Car At All Times</li>
+                    <li>Wear Safety Gear While Driving</li>
+                    <li>Stick To Speed Limits</li>
+                    <li>Keep A Safe Distance With The Car In Front Of You</li>
+                    <li>Do Not Drink And Drive</li>
+                    <li>Maintain The Car In Good Condition</li>
+                    <li>Practise Defensive Driving</li>
+                    <li>Avoid Distractions</li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="thirdTwo" style="width: 50%;">
+            <div class="doTo">
+                <h3 class="thirdHead">What not to do to maintain safety on the roads</h3>
+                <ul class="todo">
+                    <li>Do not drive without an Insurance Policy</li>
+                    <li>Don’t forget to wear a seatbelt</li>
+                    <li>Driving without registration papers</li>
+                    <li>Not giving way to emergency vehicles</li>
+                    <li>Talking on a mobile phone</li>
+                    <li>Do Not forget your Driving License</li>
+                    <li>Driving when mentally unfit</li>
+                    <li>Do not indulge in Racing or Speeding</li>
+                    <li>Avoid Unauthorized use of your car</li>
+                    <li>Avoid drinking and driving</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h2 class="mainHead">List of Traffic Violation & Fines</h2>
+
+    <div class="mainDiv">
+        <div class="div1" style="width: 50%;">
+            <h3 class="thirdHead">Offences Related to Road Marking</h3>
+            <table>
+                <tr class="tHead">
+                    <th>Offences</th>
+                    <th>Penalty</th>
+                    <th>Section(Motor Vehicle Act)</th>
+                </tr>
+                <tr class="tRow">
+                    <td>Violating the Yellow Line</td>
+                    <td>Rs.100</td>
+                    <td>119/177</td>
+                </tr>
+                <tr class="tRow">
+                    <td>Violating the Stop Line</td>
+                    <td>Rs.100</td>
+                    <td>113(1)/177</td>
+                </tr>
+                <tr class="tRow">
+                    <td>Violating the Mandatory Signs</td>
+                    <td>Rs.100</td>
+                    <td>119/177</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+
+        <div class="div2" style="width: 50%;">
+            <h3 class="thirdHead">Offences Related to Vehicle Number Plates</h3>
+            <table>
+                <tr class="tHead">
+                    <th>Offences</th>
+                    <th>Penalty</th>
+                    <th>Section(Motor Vehicle Act)</th>
+                </tr>
+                <tr class="tRow">
+                    <td>Use of Offensive Number Plate for vehicle used in driving</td>
+                    <td>Rs.100</td>
+                    <td>CMVR 105 (2) (ii)</td>
+                </tr>
+                <tr class="tRow">
+                    <td>Displaying 'Applied For'</td>
+                    <td>Rs.4500</td>
+                    <td>177</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+    </div>
+
+    <div class="mainDiv2">
+        <div class="div3" style="width: 50%;">
+            <h3 class="thirdHead">Offences Related to Vehicle Lights</h3>
+            <table>
+                <tr class="tHead">
+                    <th>Offences</th>
+                    <th>Penalty</th>
+                    <th>Section(Motor Vehicle Act)</th>
+                </tr>
+                <tr class="tRow">
+                    <td>Improper use of headlights and/ or taillight for your vehicle used in driving
+                    </td>
+                    <td>Rs.100</td>
+                    <td>CMVR 105 (2) (ii)</td>
+                </tr>
+                <tr class="tRow">
+                    <td>Using a High Beam when it is not needed</td>
+                    <td>Rs.100</td>
+                    <td>177</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+
+        <div class="div4" style="width: 50%;">
+            <h3 class="thirdHead">Offences Related to Traffic Police and Traffic Signal</h3>
+            <table>
+                <tr class="tHead">
+                    <th>Offences</th>
+                    <th>Penalty</th>
+                    <th>Section(Motor Vehicle Act)</th>
+                </tr>
+                <tr class="tRow">
+                    <td>Disobeying a Traffic Police Officer in uniform</td>
+                    <td>Rs.100</td>
+                    <td>119</td>
+                </tr>
+                <tr class="tRow">
+                    <td>Driving against Police Signal</td>
+                    <td>Rs.100</td>
+                    <td>22 (a) RRR</td>
+                </tr>
+                <tr class="tRow">
+                    <td>Not complying with the Traffic signal / Sign Board</td>
+                    <td>Rs.100</td>
+                    <td>22 (b) RRR</td>
+                </tr>
+                <tr class="tRow">
+                    <td>Signal Jumping</td>
+                    <td>Rs.100</td>
+                    <td>177</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+    </div>
+
+    <div class="div5">
+        <h3 class="thirdHead">Offences Related to Pollution</h3>
+        <table>
+            <tr class="tHead">
+                <th>Offences</th>
+                <th>Penalty</th>
+                <th>Section(Motor Vehicle Act)</th>
+            </tr>
+            <tr class="tRow">
+                <td>Smoking in Public Transport is strictly prohibited</td>
+                <td>Rs.100</td>
+                <td>86 (1) (5)/ 177 DMV</td>
+            </tr>
+            <tr class="tRow">
+                <td>Pollution Not Under Control</td>
+                <td>Rs.100</td>
+                <td>99 (1) (a)/ 177 DMVR</td>
+            </tr>
+            <tr class="tRow">
+                <td>Using multi-toned and/ or shrill horn</td>
+                <td>Rs.500</td>
+                <td>119 CMVR</td>
+            </tr>
+            <tr class="tRow">
+                <td>Blowing Pressure Horn</td>
+                <td>Rs.100</td>
+                <td>190 (2) </td>
+            </tr>
+            <tr class="tRow">
+                <td>Silencer and/ or muffler making a huge noise</td>
+                <td>Rs.500</td>
+                <td>96 (1)/ 177 DMVR</td>
+            </tr>
+            <tr class="tRow">
+                <td>Smoky Exhaust (against specifications)</td>
+                <td>Rs.500</td>
+                <td>CMVR 120</td>
+            </tr>
+            <tr class="tRow">
+                <td>Use of horn in Silence Zone</td>
+                <td>Rs.100</td>
+                <td>190 (2)</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div class="div6">
+        <h2 class="thirdHead">List of Offences</h2>
+        <table>
+            <tr class="tHead">
+                <th>Traffic rules violated</th>
+                <th>Fine Amount</th>
+                <!-- <th class="tHead">Traffic rules violated</th>     -->
+            </tr>
+            <tr class="tRow">
+                <td>Drunk driving or driving under influence of intoxicated items</td>
+                <td>Rs.10,000 and/or 6 months in prison, Rs.15,000 and/or 2 years in prison in case of repetition of violation
+                </td>
+            </tr>
+            <tr class="tRow">
+                <td>Overloading pillion riders </td>
+                <td>Rs.2,000 plus disqualification of licence and/or community service for three months</td>
+            </tr>
+            <tr class="tRow">
+                <td>Over speeding</td>
+                <td>Rs.1,000 for LMV, Rs.2,000 for MMV</td>
+            </tr>
+            <tr class="tRow">
+                <td>Dangerous driving</td>
+                <td>Rs.1,000 to Rs.5,000, licence seizure, and/or 6 months to 1 year in prison</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving without licence </td>
+                <td>Rs.5,000 and/or community service</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving without insurance</td>
+                <td>Rs.2,000 and/or 3 months in prison, community service, Rs.4,000 in case of repetition of violation
+                </td>
+            </tr>
+            <tr class="tRow">
+                <td>Signal jumping</td>
+                <td>Rs.1,000 to Rs.5,000, licence seizure, and/or 6 months to 1 year in prison</td>
+            </tr>
+            <tr class="tRow">
+                <td>Riding without helmet</td>
+                <td>Rs.1,000 plus licence scrapping for three months</td>
+            </tr>
+            <tr class="tRow">
+                <td>Riding without permit</td>
+                <td>Up to Rs.10,000</td>
+            </tr>
+            <tr class="tRow">
+                <td>Juvenile driving</td>
+                <td>Rs.25,000 with three years of imprisonment, cancellation of registration of vehicle for 1 year, and ineligibility to avail a driving licence until 25 years of age</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+
+    <div class="div7">
+        <h3 class="thirdHead">Offences Related to Documents</h3>
+        <table>
+            <tr class="tHead">
+                <th>Offences</th>
+                <th>Penalty</th>
+                <th>Section(Motor Vehicle Act)</th>
+            </tr>
+            <tr class="tRow">
+                <td>Driving without carrying a valid driving licence</td>
+                <td>Rs.5000* and/or community service</td>
+                <td>Section 181</td>
+            </tr>
+            <tr class="tRow">
+                <td>Not carrying the required documents as specified in Motor Vehicle Act while driving
+                </td>
+                <td>Rs.500</td>
+                <td>130(3) r/w 177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving without a valid auto insurance</td>
+                <td>Rs.2000*</td>
+                <td>Section 196</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving without a valid permit</td>
+                <td>Rs.10,000* and/or up to 6 months of prison and community service</td>
+                <td>Section 192 A</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving after being disqualified</td>
+                <td>Rs.10,000*</td>
+                <td>Section 182</td>
+            </tr>
+            <tr class="tRow">
+                <td>Violating licensing conditions (Aggregators)
+                </td>
+                <td>Rs.25,000 to Rs.1 lakh</td>
+                <td>Section 193</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving without Valid Vehicle Fitness Certificate
+                </td>
+                <td>Up to Rs.5000 and no less than Rs.2000</td>
+                <td>130 r/w 177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Vehicle without RC Book (Registration Certificate)
+                </td>
+                <td>Rs.2000</td>
+                <td>39 r/w 192</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+
+    <div class="div8">
+        <h3 class="thirdHead">Offences Related to Driving</h3>
+        <table>
+            <tr class="tHead">
+                <th>Offences</th>
+                <th>Penalty</th>
+                <th>Section(Motor Vehicle Act)</th>
+            </tr>
+            <tr class="tRow">
+                <td>Violation of rules of road regulation</td>
+                <td>Rs.500</td>
+                <td>Section 177A</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving by a minor (aged below 18)</td>
+                <td>Rs.25,000 with three years of imprisonment of guardian or owner</td>
+                <td>4 r/w 181</td>
+            </tr>
+            <tr class="tRow">
+                <td>Offences made by juveniles (aged below 18 years)</td>
+                <td>Rs.25,000 with three years of imprisonment, cancellation of registration of vehicle for 1 year, and ineligibility to avail a driving licence until 25 years of age</td>
+                <td>Section 199</td>
+            </tr>
+            <tr class="tRow">
+                <td>Not obeying the orders of the authorities
+                </td>
+                <td>Rs.2,000</td>
+                <td>Section 179</td>
+            </tr>
+            <tr class="tRow">
+                <td>Over speeding of vehicle</td>
+                <td>Rs.1,000 for Light Motor Vehicles (LMVs)/ Rs.2,000 for Medium Passenger Vehicles (MPVs)
+                </td>
+                <td>Section 183</td>
+            </tr>
+            <tr class="tRow">
+                <td>Oversize vehicles</td>
+                <td>Rs.5,000 to Rs.10,000* and/or community service</td>
+                <td>Section 182 B</td>
+            </tr>
+            <tr class="tRow">
+                <td>Letting an unlicensed fellow to drive</td>
+                <td>Rs.1000</td>
+                <td>5 r/w 180</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving two wheelers without wearing a helmet</td>
+                <td>Rs.1,000 and disqualification of driving license for 3 months*</td>
+                <td>129 r/w177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving without fastening the seat belts
+                </td>
+                <td>Rs.1,000*</td>
+                <td>Section 194 B</td>
+            </tr>
+            <tr class="tRow">
+                <td>Rough/ Reckless/ Negligent Driving</td>
+                <td>Rs.1000*</td>
+                <td>Section 177 </td>
+            </tr>
+            <tr class="tRow">
+                <td>Dangerous driving</td>
+                <td>Rs.5,000*</td>
+                <td>Section 184</td>
+            </tr>
+            <tr class="tRow">
+                <td>Racing or speeding on public roads</td>
+                <td>Rs.5,000*</td>
+                <td>Section 189</td>
+            </tr>
+            <tr class="tRow">
+                <td>Not making way for emergency vehicles
+                </td>
+                <td>Rs.10,000*</td>
+                <td>Section 194 E</td>
+            </tr>
+            <tr class="tRow">
+                <td>Not driving in the proper lane</td>
+                <td>Court Challan</td>
+                <td>112-183</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving in the centre and not keeping to left side of the road</td>
+                <td>Rs.100</td>
+                <td>66 r/w 192</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving against One Way</td>
+                <td>Rs.100</td>
+                <td>2 RRR r/w 177 </td>
+            </tr>
+            <tr class="tRow">
+                <td>Reversing without due caution and care
+                </td>
+                <td>Rs.100</td>
+                <td>17 (i) RRR 177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Taking “U” turn during forbidden hours
+                </td>
+                <td>Rs.100</td>
+                <td>MMVR 233</td>
+            </tr>
+            <tr class="tRow">
+                <td>Tripling on bikes/ two wheelers</td>
+                <td>Rs.100</td>
+                <td>128/177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Driving on Footpath</td>
+                <td>Rs.100</td>
+                <td>RRR 177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Stopping at pedestrian from crossing or crossing a Stop Line (Zebra Cross)</td>
+                <td>Rs.100</td>
+                <td>RRR 177</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div class="div9">
+        <h3 class="thirdHead">Offences Related to Parking</h3>
+        <table>
+            <tr class="tHead">
+                <th>Offences</th>
+                <th>Penalty</th>
+                <th>Section(Motor Vehicle Act)</th>
+            </tr>
+            <tr class="tRow">
+                <td>Parking in the same direction of the flow of traffic</td>
+                <td>Rs.100</td>
+                <td>22 (a) RRR 177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking away from walkway towards road</td>
+                <td>Rs.100</td>
+                <td>15 (2) RRR 177 </td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking against flow of traffic</td>
+                <td>Rs.100</td>
+                <td>15 (2) RRR 177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking causing Obstruction to other vehicles and people</td>
+                <td>Rs.100</td>
+                <td>15 (2) RRR 177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking on any Taxi Stand</td>
+                <td>Rs.100</td>
+                <td>15 (2) RRR 177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking in not any specified way</td>
+                <td>Rs.100</td>
+                <td>15 (1) RRR 177
+                </td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking at any Corner/ Edge</td>
+                <td>Rs.100</td>
+                <td>15 (i) RRR 177 </td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking within 15 meters on either side of a Bus Stop, causing inconvenience to those waiting for bus as well as bus drivers</td>
+                <td>Rs.100</td>
+                <td>>15 (2) RRR 177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking on a Bridge</td>
+                <td>Rs.100</td>
+                <td>15 (2) (i) RRR 177
+                </td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking at any Traffic Island</td>
+                <td>Rs.100</td>
+                <td>15 (i) RRR 177
+                </td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking in ‘No Parking’ Zone</td>
+                <td>Rs.100</td>
+                <td>15 (2) RRR 177
+                </td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking on any Pedestrian Crossing</td>
+                <td>Rs.100</td>
+                <td>15 (2) (iii) RRR 177</td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking the vehicle on Walkways</td>
+                <td>Rs.100</td>
+                <td>15(2) (ii) RRR 177
+                </td>
+            </tr>
+            <tr class="tRow">
+                <td>Parking in front of any gate</td>
+                <td>Rs.100</td>
+                <td>15 (2) (viii) RRR 177</td>
+            </tr>
+
+            <tr class="tRow">
+                <td>Any kind of obstruction caused due to the way you have parked your vehicle
+                </td>
+                <td>Rs.100</td>
+                <td>15(1) RRR 177 </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+</body>
+
+</html>
